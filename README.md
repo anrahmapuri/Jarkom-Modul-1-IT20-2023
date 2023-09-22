@@ -52,11 +52,12 @@ Pada soal ini, kami diminta untuk meilhat berapa paket dengan IP source maupun d
     - ip.addr == 239.255.255.250 → filter untuk mencari paket-paket yang memiliki alamat IP sumber (ip.src) atau alamat IP tujuan (ip.dst) 239.255.255.250
     - **udp.port == 3702 →** filter untuk port UDP sumber (udp.srcport) atau port UDP tujuan (udp.dstport) 3702.
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/6c243e62-52be-4988-9c25-04f6677216eb/Untitled.jpeg)
+    ![Untitled](https://i.ibb.co/MZB14hj/Screenshot-2023-09-22-162652.png)
     
 - Hasil yang didapat adalah 21 paket dengan protokol UDP
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/b9689f39-a6c3-4ad0-88ab-647b6183c78f/Untitled.png)
+![Untitled](https://i.ibb.co/vsmh5H3/Screenshot-2023-09-18-215034.png)
+
 
 ## Soal 4
 
