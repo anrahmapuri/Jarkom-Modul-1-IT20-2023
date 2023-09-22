@@ -28,12 +28,16 @@ Masukkan jawaban tersebut ke netcat
 
 **Cara pengerjaan** : 
 Pertama-tama, lakukan filtering pada wireshark untuk menampilkan paket http dengan query “http”
+![Foto](./img/6.PNG)
 
 Periksa paket yang merupakan respons dari protokol HTTP seperi HTTP 200 dan 403
+![Foto](./img/7.PNG)
 
-Dibagian HTTP sebelah kiri bawah, kita dapat menemukan server yang digunakan, yaitu gunicor (Green Unicorn)
+Dibagian HTTP sebelah kiri bawah, kita dapat menemukan server yang digunakan, yaitu gunicorn (Green Unicorn)
+![Foto](./img/8.PNG)
 
-Masukkan jawaban ke netcat 
+Masukkan jawaban ke netcat
+![Foto](./img/9.PNG)
 
 ## Soal 3
 
@@ -86,44 +90,47 @@ Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nom
 
 **Cara pengerjaan** : 
 Kita diberikan dua file, satu file zip dan pcap, disini kita akan mencari password dari zip terlebih dahulu yang berada di file pcap. Lakukan filtering untuk menampilkan paket yang menggunakan protokol SMTP dengan query “smtp”
-
-
-
-
-
-
-
-
+![Foto](./img/10.PNG)
 
 Follow TCP Stream paket-paket tersebut dengan cara klik kanan > Follow > TCP Stream
+![Foto](./img/11.PNG)
 
 Setelah ditelusuri, dapat ditemukan password yang masih terenkripsi dengan enkripsi Base64. Kita dapat mendekripsinya menggunakan tools yang ada di internet
+![Foto](./img/12.PNG)
 
 Setelah didekripsi, ditemukan password sebagai berikut, password berikut merupakan password dari file zip yang diberikan
+![Foto](./img/13.PNG)
 
 File zip tersebut mengandung alamat netcat yang akan kita gunakan nantinya untuk mendapatkan flag
+![Foto](./img/14.PNG)
 
 Kembali ke Wireshark, hilangkan filtering yang kita gunakan, maka disebelah kanan bawah akan tampil total paket yang ada
+![Foto](./img/15.PNG)
 
 Kemudian disebelah kiri ada keterangan untuk paket SMTP menggunakan port 25
+![Foto](./img/16.PNG)
 
 Untuk IP Addressnya dapat dilihat paket SMTP di bagian source nya
+![Foto](./img/17.PNG)
 
 Masukkan informasi-informasi tersebut ke nc
-
+![Foto](./img/18.PNG)
 
 ## Nomor 6 - Addressing
 **Deskripsi** : Pada soal nomor 6 ini kita diminta untuk mencari pesan tersembunyi yang tersimpan di dalam file packet capture
 
 **Cara pengerjaan** : 
 Di soal dijelaskan bahwa source address 7812 is invalid. Ini adalah sebuah clue, kita dapat langsung menuju ke paket nomor 7812
+![Foto](./img/19.PNG)
 
 Pada soal terdapat hint bahwa “source address adalah kunci” maka kita dapat melihat source IP Address pada paket tersebut yaitu 104.18.14.101
+![Foto](./img/20.PNG)
 
 Hint lainnya mengatakan bahwa pesan merupakan pesan cipher dengan tipe a1z26 dengan ketentuan bahwa rentang huruf yang digunakan Huruf A-R, 1-18 dengan jawaban 6 huruf. Jika kita decode dengan petunjuk tersebut, maka akan di dapatkan 10-4.18.14.10-1 atau JDRNJA
-
+![Foto](./img/21.PNG)
 
 Masukkan teks yang sudah di decode kedalam netcat
+![Foto](./img/22.PNG)
 
 ## Soal 7
 
@@ -187,24 +194,13 @@ Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambi
 
 **Cara pengerjaan** : 
 Lakukan filtering untuk menampilkan paket yang menggunakan protokol telnet dengan menggunakan query “telnet”
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Foto](./img/23.PNG)
 
 Kemudian kita dapat mem-follow paket-paket tersebut dengan cara klik kanan > follow > TCP Stream
+![Foto](./img/24.PNG)
 
 Setelah ditelusuri masing-masing stream dari paket-paket tersebut, di stream terakhir. Jika diperhatikan dengan baik (lihat warna blok dari teksnya) dapat ditemukan username dan password yang diinginkan yaitu dhafin:kesayangannyak0k0
-
+![Foto](./img/25.PNG)
 
 Masukan kredensial tersebut ke netcat
-
+![Foto](./img/26.PNG)
