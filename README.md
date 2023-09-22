@@ -1,10 +1,8 @@
 # Jarkom-Modul-1-IT20-2023
 
-WRITE UP PRAKTIKUM JARKOM - MODUL 1 
-IT20
+# Laporan Resmi Praktikum Jaringan Komputer - Modul 1 IT20
 
-
-Annisa Rahmapuri - 5027211018
+### Annisa Rahmapuri - 5027211018
 Abdul Zaki Syarul Rahmat - 502721120
 
 ## Nomor 1 - Addressing
@@ -73,7 +71,7 @@ Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nom
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark
 - Check detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
     
-    ![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/a691709b-62c2-4cd1-b2cf-b49744aa889e/Untitled.png](https://i.ibb.co/vx3H83N/Screenshot-2023-09-18-205036.png))
+    ![Untitled](https://i.ibb.co/vx3H83N/Screenshot-2023-09-18-205036.png)
     
 
 ### Dokumentasi
@@ -163,7 +161,7 @@ Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambi
 
 ### Dokumentasi
 
-![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/0dd468b3-09bb-4a9f-8b8d-1994acffd0f8/Untitled.png](https://i.ibb.co/PW8hmHZ/Screenshot-2023-09-18-204702.png))
+![Untitled](https://i.ibb.co/PW8hmHZ/Screenshot-2023-09-18-204702.png)
 
 ## Soal 9
 
