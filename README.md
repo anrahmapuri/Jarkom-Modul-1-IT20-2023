@@ -73,12 +73,13 @@ Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nom
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark
 - Check detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/a691709b-62c2-4cd1-b2cf-b49744aa889e/Untitled.png)
+    ![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/a691709b-62c2-4cd1-b2cf-b49744aa889e/Untitled.png](https://i.ibb.co/vx3H83N/Screenshot-2023-09-18-205036.png))
     
 
 ### Dokumentasi
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/e06d95e4-b60e-461b-a3fc-8eda2f31a7d0/Untitled.png)
+![Untitled](https://i.ibb.co/7S8D8gc/Screenshot-2023-09-22-170250.png)
+
 
 ## Nomor 5 - Analysis
 **Deskripsi** : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
@@ -136,12 +137,15 @@ Pada soal ini, kami diminta untuk menghitung jumlah packet yang menuju IP 184.87
 
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark lalu memasukan filter ** ip.dst == 184.87.193.88
     - ip.dst == 184.87.193.88 → untuk mencari dan menampilkan paket data yang memiliki alamat tujuan (destination address) 184.87.193.88.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/9d43dc66-8901-4f95-b130-08aead457662/Untitled.png)
-    
+        
+        ![Untitled](https://i.ibb.co/8rjwmMv/Screenshot-2023-09-18-202817.png)
+        
 - Setelah terfilter, lihat total displayed packet di pojok kanan bawah. Terdapat 6 paket packet yang menuju IP 184.87.193.88
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/9a93b23b-03bb-4ae1-9621-bdb868488ae2/Untitled.png)
+### Dokumentasi
+
+![Untitled](https://i.ibb.co/hFybpDZ/Screenshot-2023-09-18-203753.png)
+
 
 ## Soal 8
 
@@ -157,7 +161,9 @@ Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambi
     - tcp.dstport == 80 → menampilkan paket-paket yang menuju ke port TCP 80
     - udp.dstport == 80 → menampilkan paket-paket yang menuju ke port UDP 80
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/0dd468b3-09bb-4a9f-8b8d-1994acffd0f8/Untitled.png)
+### Dokumentasi
+
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/0dd468b3-09bb-4a9f-8b8d-1994acffd0f8/Untitled.png](https://i.ibb.co/PW8hmHZ/Screenshot-2023-09-18-204702.png))
 
 ## Soal 9
 
@@ -171,7 +177,10 @@ Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambi
 
 - Query filter yang dimaksud adalah ip.src == 10.51.40.1 && ip.dst != 10.39.55.34. Filter ini berguna untuk memilih semua paket yang memiliki alamat sumber (ip.src) 10.51.40.1 dan alamat tujuan (ip.dst) yang tidak sama dengan 10.39.55.34.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/ba9ca5e3-7f24-4d46-a8a3-8a5f0205734b/Untitled.png)
+### Dokumentasi
+
+![Untitled](https://i.ibb.co/nL1SYrR/Screenshot-2023-09-18-205133.png)
+
 
 ## Nomor 10 - Stream
 **Deskripsi** : Pada nomor ini, kita diminta untuk mencari kredensial dari user yang mencoba login melalui protokol telnet
