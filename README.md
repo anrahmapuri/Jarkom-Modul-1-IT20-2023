@@ -51,6 +51,9 @@ Pada soal ini, kami diminta untuk meilhat berapa paket dengan IP source maupun d
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark lalu memasukan filter ***ip.addr == 239.255.255.250 and udp.port == 3702***
     - ip.addr == 239.255.255.250 → filter untuk mencari paket-paket yang memiliki alamat IP sumber (ip.src) atau alamat IP tujuan (ip.dst) 239.255.255.250
     - **udp.port == 3702 →** filter untuk port UDP sumber (udp.srcport) atau port UDP tujuan (udp.dstport) 3702.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/6c243e62-52be-4988-9c25-04f6677216eb/Untitled.jpeg)
+    
 - Hasil yang didapat adalah 21 paket dengan protokol UDP
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/b9689f39-a6c3-4ad0-88ab-647b6183c78f/Untitled.png)
@@ -66,9 +69,7 @@ Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nom
 ### Cara Pengerjaan
 
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark
-- Chech detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/e06d95e4-b60e-461b-a3fc-8eda2f31a7d0/Untitled.png)
+- Check detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
 
 ## Nomor 5 - Analysis
 **Deskripsi** : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
@@ -113,6 +114,55 @@ Hint lainnya mengatakan bahwa pesan merupakan pesan cipher dengan tipe a1z26 den
 
 
 Masukkan teks yang sudah di decode kedalam netcat
+
+## Soal 7
+
+Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+### Deskripsi
+
+Pada soal ini, kami diminta untuk menghitung jumlah packet yang menuju IP 184.87.193.88
+
+### Cara Pengerjaan
+
+- Pertama, mendownload dan membuka file yang tersedia pada wireshark lalu memasukan filter ** ip.dst == 184.87.193.88
+    - ip.dst == 184.87.193.88 → untuk mencari dan menampilkan paket data yang memiliki alamat tujuan (destination address) 184.87.193.88.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/9d43dc66-8901-4f95-b130-08aead457662/Untitled.png)
+    
+- Setelah terfilter, lihat total displayed packet di pojok kanan bawah. Terdapat 6 paket packet yang menuju IP 184.87.193.88
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/9a93b23b-03bb-4ae1-9621-bdb868488ae2/Untitled.png)
+
+## Soal 8
+
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+### Deskripsi
+
+Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+### Cara Pengerjaan
+
+- Query filter yang dimaksud adalah tcp.dstport == 80 || udp.dstport == 80. Di sini, kami mencoba untuk menfilter seluruh paket yang menuju port 80 dengan protokol TCP dan UDP.
+    - tcp.dstport == 80 → menampilkan paket-paket yang menuju ke port TCP 80
+    - udp.dstport == 80 → menampilkan paket-paket yang menuju ke port UDP 80
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/0dd468b3-09bb-4a9f-8b8d-1994acffd0f8/Untitled.png)
+
+## Soal 9
+
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+### Deskripsi
+
+Pada soal ini, kami diminta untuk langsung memasukan query filter untuk mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34
+
+### Cara Pengerjaan
+
+- Query filter yang dimaksud adalah ip.src == 10.51.40.1 && ip.dst != 10.39.55.34. Filter ini berguna untuk memilih semua paket yang memiliki alamat sumber (ip.src) 10.51.40.1 dan alamat tujuan (ip.dst) yang tidak sama dengan 10.39.55.34.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/ba9ca5e3-7f24-4d46-a8a3-8a5f0205734b/Untitled.png)
 
 ## Nomor 10 - Stream
 **Deskripsi** : Pada nomor ini, kita diminta untuk mencari kredensial dari user yang mencoba login melalui protokol telnet
