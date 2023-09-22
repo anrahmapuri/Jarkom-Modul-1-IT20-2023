@@ -3,7 +3,7 @@
 # Laporan Resmi Praktikum Jaringan Komputer - Modul 1 IT20
 
 ### Annisa Rahmapuri - 5027211018
-Abdul Zaki Syarul Rahmat - 502721120
+### Abdul Zaki Syarul Rahmat - 502721120
 
 ## Nomor 1 - Addressing
 **Deskripsi** : Pada nomor 1 ini user diminta untuk mencari paket yang mengupload sebuah file dan juga paket yang merupakan respons nya. Kemudian menginputkan sequence number (raw) dan acknowledge number (raw) dari kedua paket tersebut
