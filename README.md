@@ -1,5 +1,3 @@
-# Jarkom-Modul-1-IT20-2023
-
 # Laporan Resmi Praktikum Jaringan Komputer - Modul 1 IT20
 
 ### Annisa Rahmapuri - 5027211018
