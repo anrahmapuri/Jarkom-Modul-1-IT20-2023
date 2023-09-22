@@ -51,13 +51,14 @@ Pada soal ini, kami diminta untuk meilhat berapa paket dengan IP source maupun d
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark lalu memasukan filter ***ip.addr == 239.255.255.250 and udp.port == 3702***
     - ip.addr == 239.255.255.250 → filter untuk mencari paket-paket yang memiliki alamat IP sumber (ip.src) atau alamat IP tujuan (ip.dst) 239.255.255.250
     - **udp.port == 3702 →** filter untuk port UDP sumber (udp.srcport) atau port UDP tujuan (udp.dstport) 3702.
-    
-    ![Untitled](https://i.ibb.co/MZB14hj/Screenshot-2023-09-22-162652.png)
-    
+        
+         ![Untitled](https://i.ibb.co/MZB14hj/Screenshot-2023-09-22-162652.png)
+        
 - Hasil yang didapat adalah 21 paket dengan protokol UDP
 
-![Untitled](https://i.ibb.co/vsmh5H3/Screenshot-2023-09-18-215034.png)
+### Dokumentasi
 
+![Untitled](https://i.ibb.co/vsmh5H3/Screenshot-2023-09-18-215034.png)
 
 ## Soal 4
 
@@ -71,6 +72,13 @@ Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nom
 
 - Pertama, mendownload dan membuka file yang tersedia pada wireshark
 - Check detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/a691709b-62c2-4cd1-b2cf-b49744aa889e/Untitled.png)
+    
+
+### Dokumentasi
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/e06d95e4-b60e-461b-a3fc-8eda2f31a7d0/Untitled.png)
 
 ## Nomor 5 - Analysis
 **Deskripsi** : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
