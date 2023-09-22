@@ -127,6 +127,7 @@ Pada soal terdapat hint bahwa “source address adalah kunci” maka kita dapat 
 ![Foto](./img/20.PNG)
 
 Hint lainnya mengatakan bahwa pesan merupakan pesan cipher dengan tipe a1z26 dengan ketentuan bahwa rentang huruf yang digunakan Huruf A-R, 1-18 dengan jawaban 6 huruf. Jika kita decode dengan petunjuk tersebut, maka akan di dapatkan 10-4.18.14.10-1 atau JDRNJA
+
 ![Foto](./img/21.PNG)
 
 Masukkan teks yang sudah di decode kedalam netcat
