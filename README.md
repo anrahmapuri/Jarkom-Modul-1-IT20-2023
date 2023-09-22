@@ -35,6 +35,41 @@ Dibagian HTTP sebelah kiri bawah, kita dapat menemukan server yang digunakan, ya
 
 Masukkan jawaban ke netcat 
 
+## Soal 3
+
+Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+
+1. Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702? 21 paket
+2. Protokol layer transport apa yang digunakan? UDP
+
+### Deskripsi
+
+Pada soal ini, kami diminta untuk meilhat berapa paket dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702 dan mengetahui protokol layer transport apa yang digunakan. 
+
+### Cara Pengerjaan
+
+- Pertama, mendownload dan membuka file yang tersedia pada wireshark lalu memasukan filter ***ip.addr == 239.255.255.250 and udp.port == 3702***
+    - ip.addr == 239.255.255.250 → filter untuk mencari paket-paket yang memiliki alamat IP sumber (ip.src) atau alamat IP tujuan (ip.dst) 239.255.255.250
+    - **udp.port == 3702 →** filter untuk port UDP sumber (udp.srcport) atau port UDP tujuan (udp.dstport) 3702.
+- Hasil yang didapat adalah 21 paket dengan protokol UDP
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/b9689f39-a6c3-4ad0-88ab-647b6183c78f/Untitled.png)
+
+## Soal 4
+
+Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+
+### Deskripsi
+
+Pada soal ini, kami diminta untuk mengecheck nilai checksum pada eader paket nomor 130
+
+### Cara Pengerjaan
+
+- Pertama, mendownload dan membuka file yang tersedia pada wireshark
+- Chech detail header pada paket nomor 130, checksum berada pada detail User Datagram Protocol dengan nilai 0x18e5
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3191aeb9-0f72-477f-996f-46b110ff72bd/e06d95e4-b60e-461b-a3fc-8eda2f31a7d0/Untitled.png)
+
 ## Nomor 5 - Analysis
 **Deskripsi** : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
 
