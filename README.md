@@ -3,12 +3,14 @@
 WRITE UP PRAKTIKUM JARKOM - MODUL 1 
 IT20
 
+
 Annisa Rahmapuri - 5027211018
 Abdul Zaki Syarul Rahmat - 502721120
 
-Nomor 1 - Addressing
-Deskripsi : Pada nomor 1 ini user diminta untuk mencari paket yang mengupload sebuah file dan juga paket yang merupakan respons nya. Kemudian menginputkan sequence number (raw) dan acknowledge number (raw) dari kedua paket tersebut
-Cara Pengerjaan : 
+## Nomor 1 - Addressing
+**Deskripsi** : Pada nomor 1 ini user diminta untuk mencari paket yang mengupload sebuah file dan juga paket yang merupakan respons nya. Kemudian menginputkan sequence number (raw) dan acknowledge number (raw) dari kedua paket tersebut
+
+**Cara Pengerjaan** : 
 Untuk melakukan hal tersebut kita dapat melakukan filtering terlebih dahulu pada wireshark untuk mencari paket yang merupakan paket ftp dengan menggunakan query “ftp”. Kemudian kita dapat mencari list paket-paket tersebut. Untuk mempermudah pencarian, paket tersebut dapat diurutkan menurut waktunya secara ascending (dari yang paling awal ke akhir)
 
 Setelah ditelusuri terdapat paket yang menggunakan “STOR”, salah satu perintah dalam protokol FTP untuk mengunggah sebuah file, dan jika diurutkan sesuai dengan waktu (ascending) make paket tepat setelahnya adalah paket respons dari request STOR
@@ -21,9 +23,10 @@ Paket respons
 Masukkan jawaban tersebut ke netcat
 
 
-Nomor 2 - Stream
-Deskripsi : User diminta untuk mencari web server yang digunakan melalui file packet capture
-Cara pengerjaan : 
+## Nomor 2 - Stream
+**Deskripsi** : User diminta untuk mencari web server yang digunakan melalui file packet capture
+
+**Cara pengerjaan** : 
 Pertama-tama, lakukan filtering pada wireshark untuk menampilkan paket http dengan query “http”
 
 Periksa paket yang merupakan respons dari protokol HTTP seperi HTTP 200 dan 403
@@ -32,31 +35,10 @@ Dibagian HTTP sebelah kiri bawah, kita dapat menemukan server yang digunakan, ya
 
 Masukkan jawaban ke netcat 
 
+## Nomor 5 - Analysis
+**Deskripsi** : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
 
-Nomor 3 
-Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
-Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702? 21 paket
-Protokol layer transport apa yang digunakan? UDP
-Penjelasan : 
-Gunakan filter ip.addr == 239.255.255.250 and udp.port == 3702
-ip.addr == 239.255.255.250 → filter untuk mencari paket-paket yang memiliki alamat IP sumber (ip.src) atau alamat IP tujuan (ip.dst) 239.255.255.250 
-udp.port == 3702 → filter untuk port UDP sumber (udp.srcport) atau port UDP tujuan (udp.dstport) 3702.
-Hasil yang terfilter → 21 paket dengan protokol UDP 
-
-
-
-Nomor 4 
-Berapa nilai checksum yang didapat dari header pada paket nomor 130?
-Penjelasan :
-Buka file → lihat detail paket no 130 
-Cari checksumnya → 0x18e5
-
-Akses nc 10.21.78.111 7272
-`	
-
-Nomor 5 - Analysis
-Deskripsi : Pada kategori Analisis nomor 5 ini kita diminta untuk menganalisa file packet capture yang diberikan dan mencari beberapa informasi terkait
-Cara pengerjaan : 
+**Cara pengerjaan** : 
 Kita diberikan dua file, satu file zip dan pcap, disini kita akan mencari password dari zip terlebih dahulu yang berada di file pcap. Lakukan filtering untuk menampilkan paket yang menggunakan protokol SMTP dengan query “smtp”
 
 
@@ -84,9 +66,10 @@ Untuk IP Addressnya dapat dilihat paket SMTP di bagian source nya
 Masukkan informasi-informasi tersebut ke nc
 
 
-Nomor 6 - Addressing
-Deskripsi : Pada soal nomor 6 ini kita diminta untuk mencari pesan tersembunyi yang tersimpan di dalam file packet capture
-Cara pengerjaan : 
+## Nomor 6 - Addressing
+**Deskripsi** : Pada soal nomor 6 ini kita diminta untuk mencari pesan tersembunyi yang tersimpan di dalam file packet capture
+
+**Cara pengerjaan** : 
 Di soal dijelaskan bahwa source address 7812 is invalid. Ini adalah sebuah clue, kita dapat langsung menuju ke paket nomor 7812
 
 Pada soal terdapat hint bahwa “source address adalah kunci” maka kita dapat melihat source IP Address pada paket tersebut yaitu 104.18.14.101
@@ -95,4 +78,30 @@ Hint lainnya mengatakan bahwa pesan merupakan pesan cipher dengan tipe a1z26 den
 
 
 Masukkan teks yang sudah di decode kedalam netcat
+
+## Nomor 10 - Stream
+**Deskripsi** : Pada nomor ini, kita diminta untuk mencari kredensial dari user yang mencoba login melalui protokol telnet
+
+**Cara pengerjaan** : 
+Lakukan filtering untuk menampilkan paket yang menggunakan protokol telnet dengan menggunakan query “telnet”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kemudian kita dapat mem-follow paket-paket tersebut dengan cara klik kanan > follow > TCP Stream
+
+Setelah ditelusuri masing-masing stream dari paket-paket tersebut, di stream terakhir. Jika diperhatikan dengan baik (lihat warna blok dari teksnya) dapat ditemukan username dan password yang diinginkan yaitu dhafin:kesayangannyak0k0
+
+
+Masukan kredensial tersebut ke netcat
 
