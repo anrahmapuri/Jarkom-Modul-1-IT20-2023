@@ -11,14 +11,17 @@ Untuk melakukan hal tersebut kita dapat melakukan filtering terlebih dahulu pada
 ![Foto](./img/1.PNG)
 
 Setelah ditelusuri terdapat paket yang menggunakan “STOR”, salah satu perintah dalam protokol FTP untuk mengunggah sebuah file, dan jika diurutkan sesuai dengan waktu (ascending) make paket tepat setelahnya adalah paket respons dari request STOR
+![Foto](./img/2.PNG)
 
 Di sebelah sebelah kiri bawah kita dapat membuka bagian TCP. Di bagian tersebut kita dapat menemukan sequence number dan acknowledge number masing-masing paket
-Paket request STOR
+- Paket request STOR
+![Foto](./img/3.PNG)
 
-Paket respons
+- Paket respons
+![Foto](./img/4.PNG)
 
 Masukkan jawaban tersebut ke netcat
-
+![Foto](./img/5.PNG)
 
 ## Nomor 2 - Stream
 **Deskripsi** : User diminta untuk mencari web server yang digunakan melalui file packet capture
